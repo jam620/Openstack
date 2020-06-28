@@ -22,13 +22,13 @@ Existen múltiples instalaciones formas de instalación e implementación de ope
 
 Al igual que podemos tener un instalación multinodos o singlenode, la imagen a continuación es un ejemplo de multinode, para este articulo usaremos todo en un solo servidor (**singlenode**)
 
-<img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/multinode.png" alt="multinode" style="zoom:50%;" />
+<img src="https://github.com/jam620/Openstack/blob/master/img/multinode.png" alt="multinode" style="zoom:50%;" />
 
 Fuente: https://github.com/bilelmsekni/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst#25-others
 
 Devstack instalara todos los componentes necesarios para **openstack** 
 
-![openstack-software-diagram](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/openstack-software-diagram.png)
+![openstack-software-diagram](https://github.com/jam620/Openstack/blob/master/img/openstack-software-diagram.png)
 
 Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
 
@@ -55,11 +55,11 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
    echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
    ```
 
-   ![2](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/2.png)
+   ![2](https://github.com/jam620/Openstack/blob/master/img/2.png)
 
    Nos logueamos como el usuario **stack** para realizar la instalación
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/3.png" alt="3" style="zoom:50%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/3.png" alt="3" style="zoom:50%;" />
 
    Procedemos a actualizar y vamos a clonar el repositorio de devstack
 
@@ -68,7 +68,7 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
    git clone https://git.openstack.org/openstack-dev/devstack
    ```
 
-   ![4](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/4.png)
+   ![4](https://github.com/jam620/Openstack/blob/master/img/4.png)
 
    Vamos a copiar un archivo de configurar 
 
@@ -76,7 +76,7 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
    cp samples/local.conf ./local.conf
    ```
 
-   ![5](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/5.png)
+   ![5](https://github.com/jam620/Openstack/blob/master/img/5.png)
 
    Modificamos los parámetros siguientes con nuestros datos
 
@@ -84,11 +84,11 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
    nano local.conf
    ```
 
-   ![6](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/6.png)
+   ![6](https://github.com/jam620/Openstack/blob/master/img/6.png)
 
    También se debe modificar el parámetro **HOST_IP** con el valor del ip del servidor
 
-   ![7](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/7.png)
+   ![7](https://github.com/jam620/Openstack/blob/master/img/7.png)
 
    Procedemos a realizar la instalación de openstack, esto proceso de instalación va a demorar un tiempo dependiendo del servidor y nuestra conexión. Recordar que debemos comprobar los permisos de ejecución del script **stack.sh**
 
@@ -96,21 +96,21 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
    ./stack.sh
    ```
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/8.png" alt="8" style="zoom: 33%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/8.png" alt="8" style="zoom: 33%;" />
 
    Cuando se termina la instalación de openstack nos debe arrojar el siguiente mensaje
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/9.png" alt="9" style="zoom:50%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/9.png" alt="9" style="zoom:50%;" />
 
 2. ###### Configuración Openstack
 
    Accedemos al url indicado http://ip/dashboard y colocamos nuestras credenciales
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/10.png" alt="10" style="zoom:50%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/10.png" alt="10" style="zoom:50%;" />
 
    Vamos entrar al panel de administración
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/11.png" alt="11" style="zoom:50%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/11.png" alt="11" style="zoom:50%;" />
 
    Crearemos una imagen que nos permita crear una instancia de ubuntu server, debemos habilitar el uso de la **cli** de opentsack 
 
@@ -118,7 +118,7 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
    source openrc admin admin
    ```
 
-   ![12](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/12.png)
+   ![12](https://github.com/jam620/Openstack/blob/master/img/12.png)
 
    Procedemos a descargar la imagen en la ruta **~/devstack/files**
 
@@ -126,7 +126,7 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
     curl -O http://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.img
    ```
 
-   ![13](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/13.png)
+   ![13](https://github.com/jam620/Openstack/blob/master/img/13.png)
 
    La imagen debe tener un formato especifico para que pueda ser utilizada por openstack
 
@@ -136,7 +136,7 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
 
    En el panel de administración con nuestro usuario admin podemos ver las imagen que acabamos de crear
 
-   ![14](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/14.png)
+   ![14](https://github.com/jam620/Openstack/blob/master/img/14.png)
 
    
 
@@ -144,15 +144,15 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
 
    De igual manera que en los proveedores más reconocidos contamos con una sección donde configuramos las políticas de seguridad. Navegue a "**Red"** y luego a "**Grupos de seguridad**" en el menú de la izquierda, como se ve en la imagen a continuación. Haga clic en "**administrar reglas**". Luego haga clic en "**Grupo de seguridad default**", porque queremos que todas las máquinas virtuales tengan las mismas reglas de firewall.
 
-   ![15](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/15.png)
+   ![15](https://github.com/jam620/Openstack/blob/master/img/15.png)
 
-   ![16](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/16.png)
+   ![16](https://github.com/jam620/Openstack/blob/master/img/16.png)
 
    Agregaremos las reglas de ping y ssh
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/17.png" alt="17" style="zoom: 25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/17.png" alt="17" style="zoom: 25%;" />
 
-   ​	<img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/18.png" alt="18" style="zoom: 33%;" />
+   ​	<img src="https://github.com/jam620/Openstack/blob/master/img/18.png" alt="18" style="zoom: 33%;" />
 
    
 
@@ -162,139 +162,139 @@ Fuente: http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/
 
    Navegue a "**Red**" y luego a "**Topología de red**" en el menú de la izquierda.
 
-   ![19](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/19.png)
+   ![19](https://github.com/jam620/Openstack/blob/master/img/19.png)
 
    Luego tendrá que crear y configurar un **routers**, para hacerlo, navegue a **Red** y luego a **Router** en el menú de la izquierda. 
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/20.png" alt="20" style="zoom: 25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/20.png" alt="20" style="zoom: 25%;" />
 
    Vamos a crear un  Router con el nombre "R1", hacemos clic en el botón "**Crear router**"
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/21.png" alt="21" style="zoom: 25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/21.png" alt="21" style="zoom: 25%;" />
 
    
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/22.png" alt="22" style="zoom: 25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/22.png" alt="22" style="zoom: 25%;" />
 
    
 
    Haga clic en el router (R1), y luego vamos a interfaces para añadirlas
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/23.png" alt="23" style="zoom: 25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/23.png" alt="23" style="zoom: 25%;" />
 
    Seleccionamos la interfaz compartida 
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/24.png" alt="24" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/24.png" alt="24" style="zoom:25%;" />
 
    
 
    Observaremos la interfaz que acabamos de añadir
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/25.png" alt="25" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/25.png" alt="25" style="zoom:25%;" />
 
    ​	
 
    Ahora nuestra red necesita otra puerta de enlace para "**alcanzar**" el mundo exterior o Internet, para eso utilizamos el adaptador de red externo.
 
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/26.png" alt="26" style="zoom: 25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/26.png" alt="26" style="zoom: 25%;" />
 
 ​			
 
-<img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/27.png" alt="27" style="zoom:25%;" />
+<img src="https://github.com/jam620/Openstack/blob/master/img/27.png" alt="27" style="zoom:25%;" />
 
 
 
 ​		Regresamos a "**Red**" y luego a "**Topología de red**" en el menú de la izquierda. Confirme que las         redes **internal** y **public** están conectados a través del enrutador "R1".
 
-<img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/28.png" alt="28" style="zoom:25%;" />
+<img src="https://github.com/jam620/Openstack/blob/master/img/28.png" alt="28" style="zoom:25%;" />
 
 5. ###### Crear instancias 
 
    Navegamos a la sección de instancias, en el menú de la izquierda debemos ir a la sección **Compute** y luego a instancias y hacemos click en **Lanzar instancia**
    
-   ![29](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/29.png) 
+   ![29](https://github.com/jam620/Openstack/blob/master/img/29.png) 
    
    Crearemos nuestra primera instancia de ubuntu server que descargamos en el **punto 2** 
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/30.png" alt="30" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/30.png" alt="30" style="zoom:25%;" />
    
    Luego, debe elegir la imagen y sí, elegimos la opción "**Eliminar volumen en la instancia Eliminar**". Y seleccione la imagen **Ubuntu**,, luego haga clic en el botón "**Siguiente**".
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/31.png" alt="31" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/31.png" alt="31" style="zoom:25%;" />
    
    A continuación, debe elegir el **sabor** de la instancia, un sabor determina cuántos núcleos, RAM y cuánto espacio en el disco duro tendrá la máquina virtual. En este ejemplo usaremos "**ds512M**". Luego haga clic en el botón "Siguiente"
    
-   ![32](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/32.png)
+   ![32](https://github.com/jam620/Openstack/blob/master/img/32.png)
    
    
    
    En esta ventana seleccionamos la red privada y luego hacemos clic en "Siguiente".
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/33.png" alt="33" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/33.png" alt="33" style="zoom:25%;" />
    
    
    
    En los **Grupos de seguridad** dejamos la opción **default**
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/34.png" alt="34" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/34.png" alt="34" style="zoom:25%;" />
    
    Podemos añadir nuestras llaves ssh en la sección **Key Pair**
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/35.png" alt="35" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/35.png" alt="35" style="zoom:25%;" />
    
    
    
    La ventana de configuración permite utilizar [cloudinit](https://cloudinit.readthedocs.io/en/latest/ "cloudinit") para personalizar nuestra imagen en este caso definimos una contraseña diferente a la que trae por defecto y por último procedemos a **Ejecutar Instancia**
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/36.png" alt="36" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/36.png" alt="36" style="zoom:25%;" />
    
    
    
    La máquina virtual se creará en el servidor con el sabor y se iniciará. Si el estado cambia a "**Corriendo**", puede hacer clic en el nombre de la máquina virtual y luego abrir la consola, debería ver la consola como un monitor virtual. Como se ve en la imagen a continuación.
    
-   ![38](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/38.png)
+   ![38](https://github.com/jam620/Openstack/blob/master/img/38.png)
    
    Openstack funciona con direcciones IP flotantes que se pueden comparar con direcciones IP externas. Para asignar una dirección IP flotante a una máquina virtual, haga clic en asociar IP flotante como se muestra en la imagen a continuación.
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/39.png" alt="39" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/39.png" alt="39" style="zoom:25%;" />
    
    
    
    En nuestro caso debemos primero añadir las direcciones flotantes
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/40.png" alt="40" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/40.png" alt="40" style="zoom:25%;" />
    
    Asignamos el ip flotante con la red **pública**
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/41.png" alt="41" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/41.png" alt="41" style="zoom:25%;" />
    
    Ahora si podemos asociar una ip flotante a la instancia de la máquina virtual
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/42.png" alt="42" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/42.png" alt="42" style="zoom:25%;" />
    
    Vemos que la dirección IP pública 172.24.4.48 se asigna a ubuntu-test.
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/43.png" alt="43" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/43.png" alt="43" style="zoom:25%;" />
    
    Si observamos las interfaz de red de la máquina virtual a la cual instalamos openstack podemos comprobar que se genera un **bridge** para conectar con las máquinas virtuales
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/44.png" alt="44" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/44.png" alt="44" style="zoom:25%;" />
    
    Le podemos llegar haciendo una prueba de ping sencilla
    
-   ![45](/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/45.png)
+   ![45](https://github.com/jam620/Openstack/blob/master/img/45.png)
    
    Accedemos a nuestra instancia por ssh
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/46.png" alt="46" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/46.png" alt="46" style="zoom:25%;" />
    
    Comprobamos la salida a internet con otro ping a google
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/48.png" alt="48" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/48.png" alt="48" style="zoom:25%;" />
    
    Existe otra manera de entrar a través de la consola de openstack, haciendo click al nombre de la instancia
    
-   <img src="/Users/jam620/Documents/Personal/Backtrack-academy/Openstack/50.png" alt="50" style="zoom:25%;" />
+   <img src="https://github.com/jam620/Openstack/blob/master/img/50.png" alt="50" style="zoom:25%;" />
    
    
    
